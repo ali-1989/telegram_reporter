@@ -1,0 +1,15 @@
+name: telegram_reporter
+description: A helpful tools to send reports from your app to telegram's server.
+version: 0.1.0
+
+repository: https://github.com/ali-1989/telegram_reporter
+
+
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+  flutter: ">=3.0.0"
+
+
+dependencies:
+  http: ^1.1.2
+

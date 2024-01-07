@@ -1,0 +1,16 @@
+name: example
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.1.0 <4.0.0"
+
+dependencies:
+  telegram_reporter:
+    path: ..
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
