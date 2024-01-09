@@ -1,6 +1,6 @@
 name: telegram_reporter
 description: A helpful tools to send reports from your app to telegram's server.
-version: 0.1.0
+version: 0.1.1
 
 repository: https://github.com/ali-1989/telegram_reporter
 

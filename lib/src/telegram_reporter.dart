@@ -69,7 +69,8 @@ class TelegramReporter {
     }
 
     try {
-      final response = await get(Uri.parse(_prepareUrl()));
+      final uri = Uri.parse(_prepareUrl().replaceAll('#', '%23'));
+      final response = await get(uri);
 
       if (response.statusCode == 200) {
         _onSuccess?.call();
@@ -88,7 +89,8 @@ class TelegramReporter {
   String _prepareUrl() {
     String finalUrl = "https://api.telegram.org/bot$_botToken"
         "/sendMessage?chat_id=$_chatId"
-        "&text=${Uri.encodeFull(_prepareReport())}";
+        "&text=${_prepareReport()}";
+        //"&text=${Uri.encodeFull(_prepareReport())}";
 
     if (_targetTopic > 0) {
       finalUrl += "&message_thread_id=$_targetTopic";
